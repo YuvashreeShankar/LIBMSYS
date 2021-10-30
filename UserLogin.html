@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management System</title>
+<link rel="stylesheet" href="UserLogin.css" >
+<script>
+function validate(){
+	var id= document.frm.uid.value;
+	var pass= document.frm.upass.value;
+	if(id==""){
+		alert("Enter login id");
+		return false;
+		}
+	else if(pass==""){
+		alert("Enter password");
+		return false;
+		}
+}
+</script>
+</head>
+<body background="index.jpg">
+<div id=f0>
+<h1>EduLib</h1>
+</div>
+<center><ul>
+<li><a  href="index.html">Home</a></li>
+<li><a class="active" href="UserLogin.html">Login</a></li>
+<li><a  href="UserRegister.html">Register</a></li>
+<li><a  href="about.html">About US</a></li>
+<li><a  href="Admin_login.html">Admin Login</a></li>
+</ul></center>
+<center>
+<br><br>
+<form name="frm" action="UserLogin" onsubmit="return validate()">
+<table border="2" bgcolor="magenta"><br><br>
+<tr style="font-size: xx-large;"><th colspan="2">User Login</th></tr>
+<tr><td>Enter user id:</td><td><input type="text" name='uid'></td></tr>
+<tr><td>Enter password:</td><td><input type="password" name='upass'></td></tr>
+<tr><th colspan="2"><input type="submit" value="Login" ></th></tr>
+</table></form>
+<h3><center>Not yet registered?</center></h3>
+<h2><a href="UserRegister.html">Register here</a></h2>
+<div id="msg"></div>
+</center>
+</body>
+</html>

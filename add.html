@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management System</title>
+<style type="text/css">
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow:hidden;
+background-color: orange;
+}
+
+li{
+float: left;
+}
+
+li a{
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+	background-color: #111;
+}
+li a.active{
+	background-color:green;
+	color:white;
+}
+</style>
+<script type="text/javascript">
+function valid(){
+	var bname= document.frm.bname.value;
+	var author= document.frm.author.value;
+	var pub= document.frm.pub.value;
+	if(bname==""){
+		alert("Enter Book Name");
+		return false;
+		}
+	else if(author==""){
+		alert("Enter Author Name");
+		return false;
+		}
+	else if(pub==""){
+		alert("Enter Publication");
+		return false;
+		}
+}
+
+</script>
+
+</head>
+<body>
+<table class="center">
+<tr>
+<td>
+<ul>
+<li><a  href="Admin_home.html">Home</a></li>
+<li><a class="active" href="add.html">Add Books</a></li>
+<li><a href="delete.html">Delete Books</a></li>
+<li><a href="booklist.jsp">Book List</a></li>
+<li><a href="userlist.jsp">User List</a></li>
+<li><a href="Admin_login.html">Logout</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<center>
+<form name="frm" action="AddBook" method="post" onsubmit="return valid()">
+<h2 style="color:red">Admin Page</h2>
+<table border="2" bgcolor="white"><br><br>
+<tr><th colspan="2">Add Books</th></tr>
+<tr><td>Enter Book Name</td><td><input type="text" name="bname"></td></tr>
+<tr><td>Enter Author Name</td><td><input type="text"name="author"></td></tr>
+<tr><td>Enter Publications</td><td><input type="text"name="pub"></td></tr>
+<tr><td colspan="2"><center><input type="submit" value="Add"></center></td></tr>
+</table>
+</center>
+</body>
+</html>

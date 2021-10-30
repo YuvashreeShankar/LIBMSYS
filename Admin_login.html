@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management System</title>
+<style type="text/css">
+#msg{
+	margin-left: auto;
+	margin-right: auto;
+	}
+</style>
+<script>
+function validate(aid,apass){
+	var aid= document.frm.aid.value;
+	var apass= document.frm.apass.value;
+	if(aid==""){
+		alert("Enter ID");
+		return false;
+	}else  if(apass==""){
+		alert("Enter password");
+		return false;
+	}
+}
+</script>
+</head>
+<body >
+<form name="frm" action="AdminLogin" onsubmit="return validate()">
+<center>
+<div id="msg">
+<table border="2" bgcolor="cyan">
+<tr><th colspan="2">Admin Login</th></tr>
+<tr><th colspan="2"><img src= "Admin.png" width="100" height="100"></th></tr>
+<tr><td>Enter admin id:</td><td><input type="text" name='aid'></td></tr>
+<tr><td>Enter password:</td><td><input type="password" name='apass'></td></tr>
+<tr><th colspan="2"><input type="submit" value="Login"></th></tr>
+</table>
+</div>
+
+</form><br><br>
+<a href="index.html">Back To Home</a>
+</center>
+</body>
+</html>
